@@ -1,0 +1,15 @@
+<form [formGroup]="quizForm">
+  <section>
+    <lib-dynamic-form
+      [fieldset]="getFormFields()"
+      [prefillData]="getQuizData()"
+      [errors]="errors"
+    ></lib-dynamic-form>
+    <button (click)="submitQuiz()">Submit</button>
+  </section>
+</form>
+
+<!-- <div *ngFor="let field of fieldsConfig">
+    <app-dynamic-form-field [field]="field"></app-dynamic-form-field>
+  </div>
+  <button type="submit">Submit</button> -->
